@@ -1,7 +1,115 @@
-<p>Hello</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Kogswell Cycles</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Supermercado+One&display=swap');
 
-<p>There</p>
+body {
+  color: #000;
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  letter-spacing: 0.0em;
+  background-color: #fff;
+  margin: 0px;
+}
 
-<code>
-vat this = that;
-</code>
+.top {
+  width: 100vw; 
+  background: #fd9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+#top1 { height: 45vh;}
+#top2 { height: 15vh;}
+#top3 { height: 40vh;}
+
+#toplogo {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  flex: 0 0 auto;
+  font-family: 'Supermercado One';
+  font-size: 2.5em;
+  letter-spacing: -3px;
+}
+
+.konsent {
+  margin-left: 10px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+
+</style>
+</head>
+<body>
+<div id='splash'>
+
+<div class="top" id='top1'>
+    <span id="toplogo">kogswell</span>
+  </div>
+
+  <div class="top" id='top2'>
+
+    <span>cookie consent</span>
+    <button class='konsent' id='konsent_yes'> yes </button>
+    <button class='konsent' id='konsent_no'> no </button>
+
+  </div>
+
+  <div class="top" id='top3'>
+    <span></span>
+  </div>
+
+</div>
+
+
+
+hello
+
+<script>
+  window.addEventListener('load', (event) => {
+    var topthing = document.getElementById('top');
+    var timer = 0;
+    var iheight = window.innerHeight;
+    while (timer > 0) {
+      timer = timer - 1;
+      //alert(iheight);
+      topthing.style.height = "100";
+    }
+  });
+
+  function myFunction() {
+    var x = 1;
+  }
+
+
+  var button_yes = document.querySelector("#konsent_yes");
+  var button_no = document.querySelector("#konsent_no");
+  button_yes.addEventListener("click", function() {
+    console.log('yes');
+  });
+  button_no.addEventListener("click", function() {
+    console.log('no');
+  });
+
+  var konstant_list = document.querySelectorAll(".konsent");
+  for (let i = 0; i < konstant_list.length; i++) {
+    konstant_list[i].addEventListener("click", function() {
+      console.log('some consent');
+      document.querySelector("#splash").style.display = 'none';
+    });
+  }
+
+</script>
+
+</body>
+</html>
