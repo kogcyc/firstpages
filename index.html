@@ -85,6 +85,13 @@ fetch("./5.txt")
    })
    .catch(err => console.log(err))
 
+
+	fetch('https://swapi.dev/api/people/1')
+	.then(response => response.json())
+	.then(commits => console.log(commits.name));
+
+
+
 </script>
 
 </body>
