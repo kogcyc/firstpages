@@ -35,7 +35,7 @@ div {
 }
 
 #documents {
-	background: #aaa;
+	background: #ccc;
 }
 
 .black {
@@ -50,6 +50,18 @@ div {
 	width: 100px;
 }
 
+.docgrid {
+display: grid;
+grid-template-columns: 1fr 3fr repeat(3, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.docgrid1 { grid-area: 1 / 1 / 2 / 2; }
+.docgrid2 { grid-area: 1 / 2 / 2 / 3; }
+.docgrid3 { grid-area: 1 / 3 / 2 / 4; } 
+
 </style>
 </head>
 
@@ -62,9 +74,18 @@ div {
 		<span class=white>PEPA</span>
 	</div>
 
+	<br>
+
 	<div class="section" id="documents">
-		<span class=black>DOCUMENTS</span><br>
-		<img class=smallImage src="./imagines/fema.jpg">
+		<span class=black>DOCUMENTS</span><br><br>
+
+		<div class="docgrid">
+			<div class="docgrid1"><img class=smallImage src="./imagines/fema.jpg"></div>
+			<div class="docgrid2"> </div>
+			<div class="docgrid2"> </div>
+		</div>
+
+		
 	</div>
 
 </div>
