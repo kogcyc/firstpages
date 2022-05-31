@@ -45,50 +45,17 @@ body {
 
 
 <script>
-  window.addEventListener('load', (event) => {
-    var topthing = document.getElementById('top');
-    var timer = 0;
-    var iheight = window.innerHeight;
-    while (timer > 0) {
-      timer = timer - 1;
-      //alert(iheight);
-      topthing.style.height = "100";
-    }
-  });
 
-  function myFunction() {
-    var x = 1;
-  }
-
-
-  var button_yes = document.querySelector("#konsent_yes");
-  var button_no = document.querySelector("#konsent_no");
-  button_yes.addEventListener("click", function() {
-    console.log('yes');
-  });
-  button_no.addEventListener("click", function() {
-    console.log('no');
-  });
-
-  var konstant_list = document.querySelectorAll(".konsent");
-  for (let i = 0; i < konstant_list.length; i++) {
-    konstant_list[i].addEventListener("click", function() {
-      console.log('some consent');
-      document.querySelector("#splash").style.display = 'none';
-    });
-  }
-
-fetch("./5.txt")
-   .then(response => response.text())
-   .then((response) => {
-       console.log(response)
-   })
-   .catch(err => console.log(err))
-
+	fetch("./5.txt")
+		.then(response => response.text())
+		.then((response) => {
+			console.log(response)
+		})
+		.catch(err => console.log(err))
 
 	fetch('https://swapi.dev/api/people/1')
-	.then(response => response.json())
-	.then(commits => console.log(commits.name));
+		.then(response => response.json())
+		.then(commits => console.log(commits.name));
 
 
 </script>
