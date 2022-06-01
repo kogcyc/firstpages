@@ -156,9 +156,9 @@ grid-row-gap: 0px;
 		.then(response => response.json())
 		.then(commits => console.log(commits.name));
 
-	fetch('https://kevsxorl35.execute-api.us-east-1.amazonaws.com/api/')
+	fetch('https://kevsxorl35.execute-api.us-east-1.amazonaws.com/api/cors/')
 		.then(response => response.json())
-		.then(commits => console.log(commits.hello));
+		.then(commits => console.log(commits.cors));
 
 </script>
 
